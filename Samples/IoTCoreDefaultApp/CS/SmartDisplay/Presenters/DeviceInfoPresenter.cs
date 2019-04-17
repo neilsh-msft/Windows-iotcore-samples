@@ -50,6 +50,14 @@ namespace SmartDisplay.Utils
                     boardName = Common.GetLocalizedText("DB410Name");
                     break;
 
+                case DeviceTypes.IMX8M:
+                    boardName = DeviceTypeInformation.ProductName;
+                    if (string.IsNullOrEmpty(boardName))
+                    {
+                        Common.GetLocalizedText("GenericBoardName");
+                    }
+                    break;
+
                 default:
                     boardName = Common.GetLocalizedText("GenericBoardName");
                     break;

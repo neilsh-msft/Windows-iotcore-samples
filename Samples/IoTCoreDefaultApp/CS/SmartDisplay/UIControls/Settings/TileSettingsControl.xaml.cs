@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 
+using SmartDisplay.Utils;
+
 namespace SmartDisplay.Controls
 {
     public sealed partial class TileSettingsControl : SettingsUserControlBase
@@ -9,7 +11,10 @@ namespace SmartDisplay.Controls
 
         public TileSettingsControl() : base()
         {
-            InitializeComponent();
+            if (DeviceTypeInformation.Type != DeviceTypes.IMX8M)
+            {
+                InitializeComponent();
+            }
         }
     }
 }

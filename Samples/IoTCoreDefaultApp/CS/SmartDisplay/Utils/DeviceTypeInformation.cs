@@ -11,6 +11,7 @@ namespace SmartDisplay.Utils
         RPI3,
         MBM,
         DB410,
+        IMX8M,
         GenericBoard,
         Unknown
     };
@@ -64,6 +65,10 @@ namespace SmartDisplay.Utils
                 else if (deviceInfo.SystemProductName == "SBC")
                 {
                     _type = DeviceTypes.DB410;
+                }
+                else if (deviceInfo.SystemProductName.IndexOf("i.MX8M", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    _type = DeviceTypes.IMX8M;
                 }
                 else
                 {

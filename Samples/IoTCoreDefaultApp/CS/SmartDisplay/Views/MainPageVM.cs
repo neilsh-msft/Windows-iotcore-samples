@@ -387,6 +387,7 @@ namespace SmartDisplay.ViewModels
             {
                 case DeviceTypes.RPI2:
                 case DeviceTypes.RPI3:
+                case DeviceTypes.IMX8M:
                     LoadingPanelBackgroundBrush = new SolidColorBrush(Colors.Black)
                     {
                         Opacity = 0.9
